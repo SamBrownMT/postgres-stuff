@@ -31,11 +31,15 @@ GEM
 
 PLATFORMS
   universal-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   pg (~> 1.4)
   rspec (~> 3.11)
   sinatra (~> 2.2)
+
+RUBY VERSION
+   ruby 2.6.8p205
 
 BUNDLED WITH
    2.3.17
