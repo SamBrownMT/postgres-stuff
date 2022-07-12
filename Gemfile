@@ -9,3 +9,5 @@ gem "rspec", "~> 3.11"
 gem "sinatra", "~> 2.2"
 
 gem "pg", "~> 1.4"
+
+ruby '2.6.8'
