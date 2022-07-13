@@ -1,5 +1,10 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
+require 'pg'
 
-get '/' do 
+connection = PG.connect(ENV['DATABASE_URL'])
 
+get '/number-of-pets' do 
+	number_of_pets = connection.exec_params("select name from pets").values[1]
+	number_of_pets
 end
