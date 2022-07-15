@@ -5,6 +5,6 @@ require 'pg'
 connection = PG.connect(ENV['DATABASE_URL'])
 
 get '/number-of-pets' do 
-	number_of_pets = connection.exec_params("select name from pets").values[1]
-	number_of_pets
+	number_of_pets = connection.exec_params("select name from pets").values.count
+	"#{number_of_pets}"
 end
